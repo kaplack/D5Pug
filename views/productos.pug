@@ -1,0 +1,18 @@
+html
+    head
+        link(rel="stylesheet", href="/public/styles.css") 
+    body 
+        nav(class="navbar") 
+            a(href="/")="Home" 
+        section 
+            div(class="content-box")
+                h1="Lista de Productos"
+                if listExists
+                    ul(class="products")
+                        each val in products
+                            li(class="products__item")
+                                h2=val.title 
+                                p="Precio: $"+val.price
+                                img(src=val.thumbnail)
+                else 
+                    h2="No hay productos"

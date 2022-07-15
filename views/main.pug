@@ -1,0 +1,17 @@
+html
+    head
+        link(rel="stylesheet", href="/public/styles.css") 
+    body 
+        nav(class="navbar") 
+            a(href="/productos")="Productos" 
+        section 
+            div(class="content-box")
+                h1="Ingrese un nuevo producto"
+                form(action="productos", id="formulario", enctype="multipart/form-data", method="post") 
+                    div(class="formInput")
+                        input(type="text", placeholder="Nombre", name="title", id="name")
+                    div(class="formInput")
+                        input(type="text", placeholder="Price", name="price", id="price")
+                    div(class="formInputFile")
+                        input(type="file", name="myFile", id="file")
+                    input(type="submit", value="Enviar")
